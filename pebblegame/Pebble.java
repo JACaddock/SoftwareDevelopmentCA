@@ -6,10 +6,12 @@ public class Pebble {
     private int weight;
     // the amount of players
 
+    // Pebble constructor
     public Pebble() {
         this.weight = randomNumGen.nextInt(100);
     }
 
+    // Getter method for Weight
     public int getWeight() {
         return this.weight;
     } 

@@ -1,37 +1,47 @@
 package pebblegame;
 
-//import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PebbleGame {
-    static int pebbleMax = Player.id * 11;
-
     //Arrays containing the varies objects
-    //private ArrayList<Pebble> pebbles = new ArrayList<>();
-    //private ArrayList<Player> players = new ArrayList<>();
-    //private ArrayList<BlackBag> blackbags = new ArrayList<>();
-    //private ArrayList<WhiteBag> whitebags = new ArrayList<>();
+    private static ArrayList<Player> players = new ArrayList<>();
 
-	public static void main(String[] args) {
-    // main - USing for testing atm
-        Scanner input = new Scanner(System.in);
-        System.out.println("How Many players?");
-        int number = input.nextInt();
-        System.out.println(number + " players");
-        input.close();
-        for (int n = 0; n < number; n++) {
-            Player Player = makePlayer();
+    public static void main(String[] args) {
+        // main - For testing atm
+        try {
+            Scanner input = new Scanner(System.in);
+            System.out.print("Please Enter the Number of players? : ");
+            int number = input.nextInt();
+            input.close();
+            System.out.println(number + " players");
+            startGame(number);
             
-            System.out.println(Player.getName());
-
-        }
-        Pebble Pebble1 = spawnPebble();
-        System.out.println(Pebble1.getWeight());
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Please Enter a valid Integer");
+        }    
     }
 
+    // The startup of the game, creates players, bags and pebbles
+    private static void startGame(int number) {
+        for (int i = 0; i < number; i++) {
+            players.add(makePlayer());
+        }
 
-    private static Pebble spawnPebble() {
-        return new Pebble();
+        int maxPebbles = 11*players.size();
+
+        ArrayList<BlackBag> blackbags = BlackBag.makeBlackBags(maxPebbles);
+        for (int i = 0; i < blackbags.size(); i++) {
+            BlackBag XYZ = blackbags.get(i);
+            System.out.println(XYZ.getName());
+        }
+        
+        ArrayList<WhiteBag> whitebags = WhiteBag.makeWhiteBags(maxPebbles);
+        for (int i = 0; i < whitebags.size(); i++) {
+            WhiteBag ABC = whitebags.get(i);
+            System.out.println(ABC.getName());      
+        }
     }
 
     // Player static nested class
@@ -57,7 +67,13 @@ public class PebbleGame {
 
 
     // Used to create a new Player
-    static Player makePlayer() {
+    private static Player makePlayer() {
         return new Player();
     }
+
+
+    // Method that takes a pebble randomly from a black bag 
+    /* private static Player takePebble() {
+        return null;
+    } */
 }
