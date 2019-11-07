@@ -4,7 +4,7 @@ package pebblegame;
 public class Bag {
     private boolean isFull;
     private boolean isEmpty;
-    private int max;
+    private int max = PebbleGame.pebbleMax;
     private int fullness;
 
 

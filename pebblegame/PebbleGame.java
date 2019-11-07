@@ -1,17 +1,38 @@
 package pebblegame;
 
+//import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PebbleGame {
+    static int pebbleMax = Player.id * 11;
+
+    //Arrays containing the varies objects
+    //private ArrayList<Pebble> pebbles = new ArrayList<>();
+    //private ArrayList<Player> players = new ArrayList<>();
+    //private ArrayList<BlackBag> blackbags = new ArrayList<>();
+    //private ArrayList<WhiteBag> whitebags = new ArrayList<>();
+
 	public static void main(String[] args) {
     // main - USing for testing atm
-        Player Player1 = makePlayer();
-        Player Player2 = makePlayer();
-        Pebble Pebble1 = new Pebble(23, Player.id);
-        System.out.println(Pebble1.getNumber());
-        System.out.println(Player1.getName());
-        System.out.println(Player2.getName());
+        Scanner input = new Scanner(System.in);
+        System.out.println("How Many players?");
+        int number = input.nextInt();
+        System.out.println(number + " players");
+        input.close();
+        for (int n = 0; n < number; n++) {
+            Player Player = makePlayer();
+            
+            System.out.println(Player.getName());
+
+        }
+        Pebble Pebble1 = spawnPebble();
+        System.out.println(Pebble1.getWeight());
     }
 
+
+    private static Pebble spawnPebble() {
+        return new Pebble();
+    }
 
     // Player static nested class
     static class Player {
