@@ -1,51 +1,36 @@
 package pebblegame;
 
 
+//import java.io.BufferedReader;
+//import java.io.FileReader;
 import java.util.ArrayList;
+//import java.util.Scanner;
 
 public class BlackBag extends Bag {
     private static ArrayList<BlackBag> blackbags = new ArrayList<>();
-    private ArrayList<Pebble> pebbles;
+    private ArrayList<Integer> pebbles;
 
 
-    public BlackBag(String name, int max, int fullness, boolean isEmpty, ArrayList<Pebble> pebbles) {
+    public BlackBag(String name, int max, int fullness, boolean isEmpty, ArrayList<Integer> pebbles) {
         super(name, max, fullness, isEmpty);
         this.pebbles = pebbles;
     }
 
     
     // Method for instantiating the 3 BlackBags
-    static ArrayList<BlackBag> makeBlackBags(int max) {
-        ArrayList<Pebble> pebblesx = new ArrayList<>();
+    static ArrayList<BlackBag> makeBlackBag(String name,int max) {
+        ArrayList<Integer> pebbles = new ArrayList<>();
         for (int i = 0; i < max; i++) {
-            pebblesx.add(spawnPebble());
+            pebbles.add(1);
         }
-        BlackBag X = new BlackBag("X", max, pebblesx.size(), false, pebblesx);
+        BlackBag X = new BlackBag(name, max, pebbles.size(), false, pebbles);
         blackbags.add(X);
-
-        ArrayList<Pebble> pebblesy = new ArrayList<>();
-        for (int i = 0; i < max; i++) {
-            pebblesy.add(spawnPebble());
-        }
-        BlackBag Y = new BlackBag("Y", max, pebblesy.size(), false, pebblesy);
-        blackbags.add(Y);
-
-        ArrayList<Pebble> pebblesz = new ArrayList<>();
-        for (int i = 0; i < max; i++) {
-            pebblesz.add(spawnPebble());
-        }
-        BlackBag Z = new BlackBag("Z", max, pebblesz.size(), false, pebblesz);
-        blackbags.add(Z);
 
         return blackbags;
     }
 
 
-    public ArrayList<Pebble> getPebbles() {
+    public ArrayList<Integer> getPebbles() {
         return this.pebbles;
-    }
-
-    private static Pebble spawnPebble() {
-        return new Pebble();
     }
 }

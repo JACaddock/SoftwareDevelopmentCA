@@ -13,10 +13,10 @@ public class PebbleGame {
     public static void main(String[] args) {
         // main - For testing atm
         try {
-            Scanner input = new Scanner(System.in);
+            Scanner playerNum = new Scanner(System.in);
             System.out.print("Please Enter the Number of players? : ");
-            int number = input.nextInt();
-            input.close();
+            int number = playerNum.nextInt();
+            playerNum.close();
             System.out.println(number + " players");
             startGame(number);            
         } catch (Exception e) {
@@ -40,13 +40,17 @@ public class PebbleGame {
 
         int maxPebbles = 11*players.size();
 
-        blackbags = BlackBag.makeBlackBags(maxPebbles);
+        blackbags.addAll(BlackBag.makeBlackBag("X", maxPebbles));
+        blackbags.addAll(BlackBag.makeBlackBag("Y", maxPebbles));
+        blackbags.addAll(BlackBag.makeBlackBag("Z", maxPebbles));
         for (int i = 0; i < blackbags.size(); i++) {
             BlackBag XYZ = blackbags.get(i);
             System.out.println(XYZ.getName());
         }
         
-        whitebags = WhiteBag.makeWhiteBags(maxPebbles);
+        whitebags.addAll(WhiteBag.makeWhiteBag("A", maxPebbles));
+        whitebags.addAll(WhiteBag.makeWhiteBag("B", maxPebbles));
+        whitebags.addAll(WhiteBag.makeWhiteBag("C", maxPebbles));
         for (int i = 0; i < whitebags.size(); i++) {
             WhiteBag ABC = whitebags.get(i);
             System.out.println(ABC.getName());      
@@ -90,8 +94,8 @@ public class PebbleGame {
         System.out.println(XYZ.getName());
         for (int i = 0; i < 10; i++) {
             int rPeb = r.nextInt(XYZ.getFullness() - i - 1);
-            Pebble cPeb = XYZ.getPebbles().remove(rPeb);
-            P.score += cPeb.getWeight();
+            int cPeb = XYZ.getPebbles().remove(rPeb);
+            P.score += cPeb;
         }
         XYZ.setFullness(XYZ.getFullness()-10);
         return P;
