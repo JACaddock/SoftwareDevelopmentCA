@@ -36,4 +36,9 @@ public class Bag {
     public int getFullness() {
         return this.fullness;
     }
+
+    
+    public void setFullness(int f) {
+        fullness = f;
+    }
 }

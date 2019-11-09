@@ -20,21 +20,21 @@ public class BlackBag extends Bag {
         for (int i = 0; i < max; i++) {
             pebblesx.add(spawnPebble());
         }
-        BlackBag X = new BlackBag("X",max,max,false,pebblesx);
+        BlackBag X = new BlackBag("X", max, pebblesx.size(), false, pebblesx);
         blackbags.add(X);
 
         ArrayList<Pebble> pebblesy = new ArrayList<>();
         for (int i = 0; i < max; i++) {
             pebblesy.add(spawnPebble());
         }
-        BlackBag Y = new BlackBag("Y",max,max,false,pebblesy);
+        BlackBag Y = new BlackBag("Y", max, pebblesy.size(), false, pebblesy);
         blackbags.add(Y);
 
         ArrayList<Pebble> pebblesz = new ArrayList<>();
         for (int i = 0; i < max; i++) {
             pebblesz.add(spawnPebble());
         }
-        BlackBag Z = new BlackBag("Z",max,max,false,pebblesz);
+        BlackBag Z = new BlackBag("Z", max, pebblesz.size(), false, pebblesz);
         blackbags.add(Z);
 
         return blackbags;
