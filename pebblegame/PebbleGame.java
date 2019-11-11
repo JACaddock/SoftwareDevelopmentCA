@@ -18,15 +18,27 @@ public class PebbleGame {
             int number = playerNum.nextInt();
             playerNum.close();
             System.out.println(number + " players");
-            startGame(number);            
+
+            // Instantiates a lot of the key objects
+            startGame(number);
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Please Enter a valid Integer");
         }  
+
+        // Currently players take turns to takePebbles but 
+        // We need them to happen at the same time w/threading
         for (Player P : players) {
-            takePebble(P, blackbags);
+            int rBag = r.nextInt(3);
+            BlackBag XYZ = blackbags.get(rBag);
+            for (int i = 0; i < 10; i++) {
+                takePebble(P, XYZ);
+            }
             System.out.println(P.getName() + " " + P.getScore());
         }
+
+        // Prints the name and fullness of every black bag
         System.out.println(blackbags.get(0).getName() + blackbags.get(0).getFullness());
         System.out.println(blackbags.get(1).getName() + blackbags.get(1).getFullness());
         System.out.println(blackbags.get(2).getName() + blackbags.get(2).getFullness());
@@ -40,17 +52,17 @@ public class PebbleGame {
 
         int maxPebbles = 11*players.size();
 
-        blackbags.addAll(BlackBag.makeBlackBag("X", maxPebbles));
-        blackbags.addAll(BlackBag.makeBlackBag("Y", maxPebbles));
-        blackbags.addAll(BlackBag.makeBlackBag("Z", maxPebbles));
+        blackbags.add(BlackBag.makeBlackBag("X", maxPebbles));
+        blackbags.add(BlackBag.makeBlackBag("Y", maxPebbles));
+        blackbags.add(BlackBag.makeBlackBag("Z", maxPebbles));
         for (int i = 0; i < blackbags.size(); i++) {
             BlackBag XYZ = blackbags.get(i);
             System.out.println(XYZ.getName());
         }
         
-        whitebags.addAll(WhiteBag.makeWhiteBag("A", maxPebbles));
-        whitebags.addAll(WhiteBag.makeWhiteBag("B", maxPebbles));
-        whitebags.addAll(WhiteBag.makeWhiteBag("C", maxPebbles));
+        whitebags.add(new WhiteBag("A", maxPebbles, 0, true));
+        whitebags.add(new WhiteBag("B", maxPebbles, 0, true));
+        whitebags.add(new WhiteBag("C", maxPebbles, 0, true));
         for (int i = 0; i < whitebags.size(); i++) {
             WhiteBag ABC = whitebags.get(i);
             System.out.println(ABC.getName());      
@@ -85,19 +97,13 @@ public class PebbleGame {
     }
 
 
-    // Method that takes a pebble randomly from a black bag 
-    private static Player takePebble(Player P, ArrayList<BlackBag> blackbags) {
-        int rBag = r.nextInt(2);
-        BlackBag XYZ = blackbags.get(rBag);
-        System.out.println(rBag);
-
+    // Method that randomly takes a pebble from a random black bag 
+    private static Player takePebble(Player P, BlackBag XYZ) {
         System.out.println(XYZ.getName());
-        for (int i = 0; i < 10; i++) {
-            int rPeb = r.nextInt(XYZ.getFullness() - i - 1);
-            int cPeb = XYZ.getPebbles().remove(rPeb);
-            P.score += cPeb;
-        }
-        XYZ.setFullness(XYZ.getFullness()-10);
+        int rPeb = r.nextInt(XYZ.getFullness() - 1);
+        int cPeb = XYZ.getPebbles().remove(rPeb);
+        P.score += cPeb;
+        XYZ.setFullness(XYZ.getFullness()-1);
         return P;
     }
 

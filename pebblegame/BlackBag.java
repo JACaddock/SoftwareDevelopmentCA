@@ -7,7 +7,6 @@ import java.util.ArrayList;
 //import java.util.Scanner;
 
 public class BlackBag extends Bag {
-    private static ArrayList<BlackBag> blackbags = new ArrayList<>();
     private ArrayList<Integer> pebbles;
 
 
@@ -18,18 +17,18 @@ public class BlackBag extends Bag {
 
     
     // Method for instantiating the 3 BlackBags
-    static ArrayList<BlackBag> makeBlackBag(String name,int max) {
+    static BlackBag makeBlackBag(String name,int max) {
         ArrayList<Integer> pebbles = new ArrayList<>();
         for (int i = 0; i < max; i++) {
             pebbles.add(1);
         }
         BlackBag X = new BlackBag(name, max, pebbles.size(), false, pebbles);
-        blackbags.add(X);
 
-        return blackbags;
+        return X;
     }
 
 
+    // Getter method for pebbles Array
     public ArrayList<Integer> getPebbles() {
         return this.pebbles;
     }

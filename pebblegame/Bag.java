@@ -1,6 +1,6 @@
 package pebblegame;
 
-
+// Class exists for White and Black bag to extend
 public class Bag {
     // Bool for whether the Bag is Empty or not
     private boolean isEmpty;
