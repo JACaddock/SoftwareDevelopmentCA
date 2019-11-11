@@ -11,21 +11,29 @@ public class PebbleGame {
     private static ArrayList<BlackBag> blackbags = new ArrayList<>();
 
     public static void main(String[] args) {
-        // main - For testing atm
-        try {
-            Scanner playerNum = new Scanner(System.in);
+        //This stuff kinda works
+        Scanner input = new Scanner(System.in);
+        String playerNum = "0";
+        do {
             System.out.print("Please Enter the Number of players? : ");
-            int number = playerNum.nextInt();
-            playerNum.close();
-            System.out.println(number + " players");
+            playerNum = input.nextLine();
+            if (playerNum.charAt(0) == 'E') {
+                System.exit(0);
+            }
+            try {
+                if (Integer.parseInt(playerNum) > 0) {
+                    // Instantiates a lot of the key objects
+                    startGame(Integer.parseInt(playerNum));
+                }
 
-            // Instantiates a lot of the key objects
-            startGame(number);
+            } catch (NumberFormatException e) {
+                System.out.println("Please Enter a valid Integer");
+                playerNum = "0";
+            }  
+        } while (Integer.parseInt(playerNum) <= 0);
+        System.out.println(playerNum + " players");
+        input.close();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Please Enter a valid Integer");
-        }  
 
         // Currently players take turns to takePebbles but 
         // We need them to happen at the same time w/threading
@@ -35,7 +43,7 @@ public class PebbleGame {
             for (int i = 0; i < 10; i++) {
                 takePebble(P, XYZ);
             }
-            System.out.println(P.getName() + " " + P.getScore());
+            System.out.println(P.getName() + " " + P.getPebbles());
         }
 
         // Prints the name and fullness of every black bag
@@ -52,6 +60,7 @@ public class PebbleGame {
 
         int maxPebbles = 11*players.size();
 
+        // Doesn't work need to find out how to use txt files etc...
         blackbags.add(BlackBag.makeBlackBag("X", maxPebbles));
         blackbags.add(BlackBag.makeBlackBag("Y", maxPebbles));
         blackbags.add(BlackBag.makeBlackBag("Z", maxPebbles));
@@ -73,10 +82,10 @@ public class PebbleGame {
     static class Player {
         static int id = 0;
         private String name;
-        private int score;
+        private ArrayList<Integer> pebbles;
 
         Player() {
-            score = 0;
+            pebbles = new ArrayList<>();
             id += 1;
             this.name = "Player" + id;
         }
@@ -85,8 +94,8 @@ public class PebbleGame {
             return name;
         }
 
-        int getScore() {
-            return score;
+        ArrayList<Integer> getPebbles() {
+            return pebbles;
         }
     }
 
@@ -102,7 +111,7 @@ public class PebbleGame {
         System.out.println(XYZ.getName());
         int rPeb = r.nextInt(XYZ.getFullness() - 1);
         int cPeb = XYZ.getPebbles().remove(rPeb);
-        P.score += cPeb;
+        P.getPebbles().add(cPeb);
         XYZ.setFullness(XYZ.getFullness()-1);
         return P;
     }
