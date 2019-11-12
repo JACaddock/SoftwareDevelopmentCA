@@ -66,9 +66,18 @@ public class BlackBag extends Bag {
 
 
         ArrayList<Integer> pebbles = new ArrayList<>();
-        for (int count = 0; count < max; count++) {
+        /*for (int count = 0; count < max; count++) {
             // Adds a random number from the possible weights imported from the text file
             pebbles.add(possWeights.get(r.nextInt(possWeights.size())));
+        } */
+
+        int index = 0;
+        for (int count = 0; count < max; count++) {
+            if (index > possWeights.size()) {
+                index = 0;
+            }
+            pebbles.add(possWeights.get(index));
+            index += 1;
         }
 
         BlackBag X = new BlackBag(name, max, pebbles);

@@ -42,7 +42,9 @@ public class PebbleGame {
                 takeTurn(P);
                 
                 if (P.getTotal() == 100) {
-                    winner = true;}
+                    winner = true;
+                    System.out.println(P.getName() + " Has won with " + " " + P.getPebbles());
+                    break;}
             }
         } while (!winner);
 
@@ -176,7 +178,7 @@ public class PebbleGame {
         int index = 0;
         int lastpeb = 0;
         for (int pebble : P.getPebbles()) {
-            if (pebble > lastpeb) {
+            if (pebble > lastpeb && 100 - P.getTotal() < 0 || pebble < (100 - P.getTotal())) {
                 index = counter;
                 lastpeb = pebble;
             }counter += 1;
@@ -187,7 +189,7 @@ public class PebbleGame {
         W.setFullness(W.getFullness()+1);
 
         System.out.println(P.getName() + " has discarded " + biggestpeb + " to White Bag " + W.getName());
-        System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
+        System.out.println(P.getName() + " " + P.getPebbles() + " " + (P.getTotal()-biggestpeb));
         return P;
     }
 
