@@ -1,10 +1,14 @@
 package pebblegame;
 
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class BlackBag extends Bag {
     private ArrayList<Integer> pebbles;
@@ -15,36 +19,53 @@ public class BlackBag extends Bag {
     }
 
     // Method for instantiating a BlackBag *CURRENTLY NOT WORKING*
-    static BlackBag makeBlackBag(String name, int max) {
-        Scanner textfile = new Scanner(System.in);
-        String textlocation = "0";
+    public static BlackBag makeBlackBag(String name, int max) {
+        ArrayList<Integer> possWeights = new ArrayList<>();
+        boolean finished = false;
+        Scanner textfile;
+        String textlocation;
         do {
-            System.out.print("Please enter the path to the text file for Black Bag " + name + " : ");
-            textlocation = textfile.next();
-            if (textlocation.charAt(0) == 'E') {
-                System.exit(0);
-            }
-            try (Scanner textInt = new Scanner(new FileReader(textlocation))) {
-
-                String thing = textInt.toString();
-                String[] thing2 = thing.split(thing);
-                for (String strong : thing2) {
-                    System.out.println(strong);
-                }
+            try {
+                System.out.print("Please enter the path to the text file for Black Bag " + name + " : ");
                 
-            } catch (NumberFormatException | IOException e) {
-                System.out.println("Please Enter a valid Path");
-                textlocation = "0";} 
-        } while (textlocation.length() <= 3);
+                textfile = new Scanner(System.in);
+                textlocation = textfile.nextLine();
+                
+                if (textlocation.charAt(0) == 'E') {
+                    System.exit(0);}
 
-        textfile.close();
+                BufferedReader br = null;
+                try{ 
+                    br = new BufferedReader(new FileReader(textlocation));
+                    String in;
 
+                    while((in = br.readLine()) != null) {
+                        String[] parts = in.split(",");
+                        for (int index = 0; index < parts.length; index++) {
+                            possWeights.add(Integer.parseInt(parts[index]));
+                        }
+                    }                
+                    
+                } catch (NumberFormatException | IOException | NullPointerException | NoSuchElementException e) {
+                    System.out.println("Please Enter a valid Path");
+                } finally {
+                    try {
+                        br.close();
+                        finished = true;
+                    } catch (IOException | NullPointerException e1) {
+                        System.out.println("Error, File not working");} 
+                }
+            } catch (IllegalStateException | NoSuchElementException e) {
+                System.out.println("Error, not receiving Input");}
+        } while (!finished);
 
 
         ArrayList<Integer> pebbles = new ArrayList<>();
-        for (int i = 0; i < max; i++) {
-            pebbles.add(1);
+        for (int count = 0; count < max; count++) {
+            // Adds a random number from the possible weights imported from the text file
+            pebbles.add(possWeights.get(r.nextInt(possWeights.size())));
         }
+
         BlackBag X = new BlackBag(name, max, pebbles.size(), false, pebbles);
 
         return X;
@@ -55,4 +76,7 @@ public class BlackBag extends Bag {
     public ArrayList<Integer> getPebbles() {
         return this.pebbles;
     }
+
+
+    static Random r = new Random();
 }
