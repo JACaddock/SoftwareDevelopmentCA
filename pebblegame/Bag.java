@@ -4,17 +4,13 @@ package pebblegame;
 // Class exists for White and Black bag to extend
 public class Bag {
     // Bool for whether the Bag is Empty or not
-    private boolean isEmpty;
     private int fullness;
-    private int max;
     private String name;
 
 
-    public Bag(String name, int max, int fullness, boolean isEmpty) {
+    public Bag(String name, int fullness) {
         this.name = name;
-        this.max = max;
         this.fullness = fullness;
-        this.isEmpty = isEmpty;
     }
 
 
@@ -23,16 +19,6 @@ public class Bag {
         return this.name;
     }
 
-
-    public int getMax() {
-        return this.max;
-    }
-
-
-    public boolean getIsEmpty() {
-        return this.isEmpty;
-    }
-    
 
     public int getFullness() {
         return this.fullness;

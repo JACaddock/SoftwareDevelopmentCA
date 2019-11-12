@@ -3,18 +3,24 @@ package pebblegame;
 
 import java.util.ArrayList;
 
+
 public class WhiteBag extends Bag {
     private ArrayList<Integer> pebbles;
-    
 
-    public WhiteBag(String name, int max, int fullness, boolean isEmpty) {
-        super(name, max, fullness, isEmpty);
+
+    public WhiteBag(String name, int max, int fullness) {
+        super(name, fullness);
+        this.pebbles = new ArrayList<>();
     }
 
 
-    public WhiteBag(String name, int max, int fullness, boolean isEmpty, ArrayList<Integer> pebbles) {
-        super(name, max, fullness, isEmpty);
-        this.pebbles = pebbles;
+    public static BlackBag emptyWhiteBag(WhiteBag W, BlackBag B) {
+        for (int pebble : W.getPebbles()) {
+            B.getPebbles().add(pebble);
+        }
+        W.getPebbles().clear();
+        B.setFullness(B.getPebbles().size());
+        return B;
     }
 
 

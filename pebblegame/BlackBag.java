@@ -13,8 +13,8 @@ import java.util.Random;
 public class BlackBag extends Bag {
     private ArrayList<Integer> pebbles;
 
-    public BlackBag(String name, int max, int fullness, boolean isEmpty, ArrayList<Integer> pebbles) {
-        super(name, max, fullness, isEmpty);
+    public BlackBag(String name, int fullness, ArrayList<Integer> pebbles) {
+        super(name, fullness);
         this.pebbles = pebbles;
     }
 
@@ -42,21 +42,26 @@ public class BlackBag extends Bag {
                     while((in = br.readLine()) != null) {
                         String[] parts = in.split(",");
                         for (int index = 0; index < parts.length; index++) {
-                            possWeights.add(Integer.parseInt(parts[index]));
+                            if (Integer.parseInt(parts[index]) <= 0) {
+                                br.close();
+                            } possWeights.add(Integer.parseInt(parts[index]));
                         }
-                    }                
+                    }
+                    finished = true;                
                     
                 } catch (NumberFormatException | IOException | NullPointerException | NoSuchElementException e) {
                     System.out.println("Please Enter a valid Path");
+                    possWeights.clear();
                 } finally {
                     try {
                         br.close();
-                        finished = true;
                     } catch (IOException | NullPointerException e1) {
-                        System.out.println("Error, File not working");} 
+                        System.out.println("Error, File not working");
+                        possWeights.clear();} 
                 }
             } catch (IllegalStateException | NoSuchElementException e) {
-                System.out.println("Error, not receiving Input");}
+                System.out.println("Error, not receiving Input");
+                possWeights.clear();}
         } while (!finished);
 
 
@@ -66,7 +71,7 @@ public class BlackBag extends Bag {
             pebbles.add(possWeights.get(r.nextInt(possWeights.size())));
         }
 
-        BlackBag X = new BlackBag(name, max, pebbles.size(), false, pebbles);
+        BlackBag X = new BlackBag(name, max, pebbles);
 
         return X;
     }
