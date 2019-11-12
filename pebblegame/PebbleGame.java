@@ -40,7 +40,6 @@ public class PebbleGame {
         do {            
             for (Player P : players) {
                 takeTurn(P);
-                //System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
                 
                 if (P.getTotal() == 100) {
                     winner = true;}
@@ -89,7 +88,7 @@ public class PebbleGame {
             for (int i = 0; i < 10; i++) {
                 takePebble(P, XYZ);
                 }
-            //System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
+            System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
             }
     }
 
@@ -139,8 +138,7 @@ public class PebbleGame {
 
         WhiteBag W = whitebags.get(P.getLastDrawn());
         discardPebble(P, W);
-
-        
+      
         int rBag = r.nextInt(3);
         BlackBag B = blackbags.get(rBag);
         P.lastdrawn = rBag;
@@ -166,6 +164,8 @@ public class PebbleGame {
             P.total += pebble;
         }
 
+        System.out.println(P.getName() + " has drawn a " + cPeb + " from Black Bag " + B.getName());
+        System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
         return P;
     }
 
@@ -182,10 +182,12 @@ public class PebbleGame {
             }counter += 1;
         }
 
-        int biggestpeb = P.getPebbles().remove(index);
-        //System.out.println(P.getName() + " has removed " + biggestpeb); 
+        int biggestpeb = P.getPebbles().remove(index); 
         W.getPebbles().add(biggestpeb);
         W.setFullness(W.getFullness()+1);
+
+        System.out.println(P.getName() + " has discarded " + biggestpeb + " to White Bag " + W.getName());
+        System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
         return P;
     }
 
