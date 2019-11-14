@@ -7,14 +7,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Random;
 
-
 public class PebbleGame {
     static Random r = new Random();
     // ArrayLists containing the varies objects
     private static ArrayList<Player> players = new ArrayList<>();
+    private static ArrayList<Thread> threads = new ArrayList<>();
     private static ArrayList<WhiteBag> whitebags = new ArrayList<>();
     private static ArrayList<BlackBag> blackbags = new ArrayList<>();
-
 
     public static void main(String[] args) {
         // The check for the number of players
@@ -40,20 +39,17 @@ public class PebbleGame {
 
         input.close();
 
-        boolean winner = false;
-        do {
-            for (Player P : players) {
-                takeTurn(P);
+        for (Thread thread : threads) {
+            thread.start();
+        }
 
-                if (P.getTotal() == 100) {
-                    winner = true;
-                    System.out.println(P.getName() + " Has won with " + P.getPebbles());
-                    break;
-                }
-            }
-        } while (!winner);
+        try {
+            threads.notifyAll();
+        } catch (IllegalMonitorStateException e) {
+            System.out.println("Oopsies");
+        }
+        
     }
-
 
     // The startup of the game, creates players, bags and pebbles
     public static void startGame(int number) {
@@ -61,6 +57,11 @@ public class PebbleGame {
 
         for (int i = 0; i < number; i++) {
             players.add(makePlayer());
+            threads.add(new Thread(players.get(i), "Thread" + (i + 1)));
+        }
+
+        for (Thread thread : threads) {
+            System.out.println(thread.getName());
         }
 
         int maxPebbles = 11 * players.size();
@@ -74,38 +75,50 @@ public class PebbleGame {
         whitebags.add(new WhiteBag("A", maxPebbles, 0));
         whitebags.add(new WhiteBag("B", maxPebbles, 0));
         whitebags.add(new WhiteBag("C", maxPebbles, 0));
-
-        /*
-         * Currently players take turns to takePebbles but We need them to happen at the
-         * same time w/threading
-         */
-        for (Player P : players) {
-            int rBag = r.nextInt(blackbags.size());
-            BlackBag XYZ = blackbags.get(rBag);
-            P.lastdrawn = rBag;
-            for (int i = 0; i < 10; i++) {
-                takePebble(P, XYZ);
-            }
-        }
     }
 
-
     // Player static nested class
-    static class Player {
+    static class Player implements Runnable {
         static int id = 0;
         private String name;
         private ArrayList<Integer> pebbles;
         private int total;
         private int lastdrawn;
         PrintStream fileOut;
+        private volatile boolean winner = false;
 
         Player() {
             pebbles = new ArrayList<>();
             id += 1;
             this.name = "Player" + id;
             this.total = 0;
-            try {fileOut = new PrintStream("./outputs/" + name + "_Output.txt");
-              } catch (FileNotFoundException e) {e.printStackTrace();}
+            try {
+                fileOut = new PrintStream("./outputs/" + name + "_Output.txt");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public void run() {
+            System.out.println("Running");
+            int rBag = r.nextInt(blackbags.size());
+            BlackBag XYZ = blackbags.get(rBag);
+            this.lastdrawn = rBag;
+            for (int i = 0; i < 10; i++) {
+                takePebble(this, XYZ);
+            }
+
+            try {
+                this.wait();
+            } catch (InterruptedException | IllegalMonitorStateException e) {
+                System.out.println("Oopsies2");
+            }
+            while (!winner) {takeTurn(this);};
+        }
+
+        
+        public void stop() {
+            winner = true;
         }
 
         String getName() {
@@ -116,26 +129,23 @@ public class PebbleGame {
             return pebbles;
         }
 
-
         int getLastDrawn() {
             return lastdrawn;
         }
-
 
         int getTotal() {
             return total;
         }
     }
 
-
     // Used to create a new Player
     private static Player makePlayer() {
         return new Player();
     }
-    
+
 
     // Method for taking turns
-    private static Player takeTurn(Player P) {
+    private synchronized static Player takeTurn(Player P) {
         WhiteBag W = whitebags.get(P.getLastDrawn());
         discardPebble(P, W);
       
@@ -155,6 +165,8 @@ public class PebbleGame {
         }
 
         takePebble(P, B);
+
+        if (P.getTotal() == 100) {for (Player Pn : players) {Pn.stop();}}
 
         return P;
     }

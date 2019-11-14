@@ -1,64 +1,24 @@
-Player2 has drawn a 26 from Black Bag Y
-Player2 hand is [26] = 26
-Player2 has drawn a 31 from Black Bag Y
-Player2 hand is [26, 31] = 57
-Player2 has drawn a 11 from Black Bag Y
-Player2 hand is [26, 31, 11] = 68
-Player2 has drawn a 17 from Black Bag Y
-Player2 hand is [26, 31, 11, 17] = 85
-Player2 has drawn a 9 from Black Bag Y
-Player2 hand is [26, 31, 11, 17, 9] = 94
-Player2 has drawn a 25 from Black Bag Y
-Player2 hand is [26, 31, 11, 17, 9, 25] = 119
-Player2 has drawn a 29 from Black Bag Y
-Player2 hand is [26, 31, 11, 17, 9, 25, 29] = 148
-Player2 has drawn a 5 from Black Bag Y
-Player2 hand is [26, 31, 11, 17, 9, 25, 29, 5] = 153
-Player2 has drawn a 14 from Black Bag Y
-Player2 hand is [26, 31, 11, 17, 9, 25, 29, 5, 14] = 167
-Player2 has drawn a 16 from Black Bag Y
-Player2 hand is [26, 31, 11, 17, 9, 25, 29, 5, 14, 16] = 183
-Player2 has discarded 31 to White Bag B
-Player2 hand is [26, 11, 17, 9, 25, 29, 5, 14, 16] = 152
-Player2 has drawn a 23 from Black Bag Y
-Player2 hand is [26, 11, 17, 9, 25, 29, 5, 14, 16, 23] = 175
-Player2 has discarded 29 to White Bag B
-Player2 hand is [26, 11, 17, 9, 25, 5, 14, 16, 23] = 146
-Player2 has drawn a 19 from Black Bag X
-Player2 hand is [26, 11, 17, 9, 25, 5, 14, 16, 23, 19] = 165
-Player2 has discarded 26 to White Bag A
-Player2 hand is [11, 17, 9, 25, 5, 14, 16, 23, 19] = 139
-Player2 has drawn a 19 from Black Bag Z
-Player2 hand is [11, 17, 9, 25, 5, 14, 16, 23, 19, 19] = 158
-Player2 has discarded 25 to White Bag C
-Player2 hand is [11, 17, 9, 5, 14, 16, 23, 19, 19] = 133
-Player2 has drawn a 29 from Black Bag X
-Player2 hand is [11, 17, 9, 5, 14, 16, 23, 19, 19, 29] = 162
-Player2 has discarded 29 to White Bag A
-Player2 hand is [11, 17, 9, 5, 14, 16, 23, 19, 19] = 133
-Player2 has drawn a 22 from Black Bag Z
-Player2 hand is [11, 17, 9, 5, 14, 16, 23, 19, 19, 22] = 155
-Player2 has discarded 23 to White Bag C
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 19, 22] = 132
 Player2 has drawn a 19 from Black Bag Y
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 19, 22, 19] = 151
-Player2 has discarded 22 to White Bag B
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 19, 19] = 129
-Player2 has drawn a 12 from Black Bag Y
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 19, 19, 12] = 141
-Player2 has discarded 19 to White Bag B
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 19, 12] = 122
-Player2 has drawn a 4 from Black Bag X
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 19, 12, 4] = 126
-Player2 has discarded 19 to White Bag A
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 12, 4] = 107
-Player2 has drawn a 9 from Black Bag X
-Player2 hand is [11, 17, 9, 5, 14, 16, 19, 12, 4, 9] = 116
-Player2 has discarded 19 to White Bag A
-Player2 hand is [11, 17, 9, 5, 14, 16, 12, 4, 9] = 97
-Player2 has drawn a 32 from Black Bag Y
-Player2 hand is [11, 17, 9, 5, 14, 16, 12, 4, 9, 32] = 129
-Player2 has discarded 32 to White Bag B
-Player2 hand is [11, 17, 9, 5, 14, 16, 12, 4, 9] = 97
-Player2 has drawn a 9 from Black Bag Z
-Player2 hand is [11, 17, 9, 5, 14, 16, 12, 4, 9, 9] = 106
+Player2 hand is [19] = 19
+Player2 has drawn a 24 from Black Bag Y
+Player2 hand is [19, 24] = 43
+Player2 has drawn a 20 from Black Bag Y
+Player2 hand is [19, 24, 20] = 63
+Player2 has drawn a 9 from Black Bag Y
+Player2 hand is [19, 24, 20, 9] = 72
+Player2 has drawn a 7 from Black Bag Y
+Player2 hand is [19, 24, 20, 9, 7] = 79
+Player2 has drawn a 6 from Black Bag Y
+Player2 hand is [19, 24, 20, 9, 7, 6] = 85
+Player2 has drawn a 28 from Black Bag Y
+Player2 hand is [19, 24, 20, 9, 7, 6, 28] = 113
+Player2 has drawn a 25 from Black Bag Y
+Player2 hand is [19, 24, 20, 9, 7, 6, 28, 25] = 138
+Player2 has drawn a 26 from Black Bag Y
+Player2 hand is [19, 24, 20, 9, 7, 6, 28, 25, 26] = 164
+Player2 has drawn a 21 from Black Bag Y
+Player2 hand is [19, 24, 20, 9, 7, 6, 28, 25, 26, 21] = 185
+Player2 has discarded 28 to White Bag B
+Player2 hand is [19, 24, 20, 9, 7, 6, 25, 26, 21] = 157
+Player2 has drawn a 29 from Black Bag X
+Player2 hand is [19, 24, 20, 9, 7, 6, 25, 26, 21, 29] = 186
