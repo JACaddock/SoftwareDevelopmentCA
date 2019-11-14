@@ -5,9 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
-import java.util.Random;
 
 
 public class BlackBag extends Bag {
@@ -18,7 +16,7 @@ public class BlackBag extends Bag {
         this.pebbles = pebbles;
     }
 
-    // Method for instantiating a BlackBag *CURRENTLY NOT WORKING*
+    // Method for instantiating a BlackBag
     public static BlackBag makeBlackBag(String name, int max) {
         ArrayList<Integer> possWeights = new ArrayList<>();
         boolean finished = false;
@@ -49,18 +47,17 @@ public class BlackBag extends Bag {
                     }
                     finished = true;                
                     
-                } catch (NumberFormatException | IOException | NullPointerException | NoSuchElementException e) {
-                    System.out.println("Please Enter a valid Path");
+                } catch (IOException e) {
+                    System.out.println("Error, ind File");
                     possWeights.clear();
                 } finally {
                     try {
                         br.close();
                     } catch (IOException | NullPointerException e1) {
-                        System.out.println("Error, File not working");
                         possWeights.clear();} 
                 }
-            } catch (IllegalStateException | NoSuchElementException e) {
-                System.out.println("Error, not receiving Input");
+            } catch (StringIndexOutOfBoundsException e) {
+                System.out.println("Error, invalid Input");
                 possWeights.clear();}
         } while (!finished);
 
@@ -73,7 +70,7 @@ public class BlackBag extends Bag {
 
         int index = 0;
         for (int count = 0; count < max; count++) {
-            if (index > possWeights.size()) {
+            if (index >= possWeights.size()) {
                 index = 0;
             }
             pebbles.add(possWeights.get(index));
@@ -90,7 +87,4 @@ public class BlackBag extends Bag {
     public ArrayList<Integer> getPebbles() {
         return this.pebbles;
     }
-
-
-    static Random r = new Random();
 }

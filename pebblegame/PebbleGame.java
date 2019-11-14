@@ -1,16 +1,20 @@
 package pebblegame;
 
 
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Random;
 
 
 public class PebbleGame {
-    //ArrayLists containing the varies objects 
+    static Random r = new Random();
+    // ArrayLists containing the varies objects
     private static ArrayList<Player> players = new ArrayList<>();
     private static ArrayList<WhiteBag> whitebags = new ArrayList<>();
     private static ArrayList<BlackBag> blackbags = new ArrayList<>();
+
 
     public static void main(String[] args) {
         // The check for the number of players
@@ -31,34 +35,23 @@ public class PebbleGame {
             } catch (NumberFormatException e) {
                 System.out.println("Please Enter a valid Integer");
                 playerNum = "0";
-            }  
+            }
         } while (Integer.parseInt(playerNum) <= 0);
 
         input.close();
 
         boolean winner = false;
-        do {            
+        do {
             for (Player P : players) {
                 takeTurn(P);
-                
+
                 if (P.getTotal() == 100) {
                     winner = true;
-                    System.out.println(P.getName() + " Has won with " + " " + P.getPebbles());
-                    break;}
+                    System.out.println(P.getName() + " Has won with " + P.getPebbles());
+                    break;
+                }
             }
         } while (!winner);
-
-
-        // Prints the name, fullness and contents of every black bag
-        System.out.println(blackbags.get(0).getName() + blackbags.get(0).getFullness() + " " + blackbags.get(0).getPebbles());
-        System.out.println(blackbags.get(1).getName() + blackbags.get(1).getFullness() + " " + blackbags.get(1).getPebbles());
-        System.out.println(blackbags.get(2).getName() + blackbags.get(2).getFullness() + " " + blackbags.get(2).getPebbles());
-
-
-        // Prints the name, fullness and contents of every white bag
-        System.out.println(whitebags.get(0).getName() + whitebags.get(0).getFullness() + " " + whitebags.get(0).getPebbles());
-        System.out.println(whitebags.get(1).getName() + whitebags.get(1).getFullness() + " " + whitebags.get(1).getPebbles());
-        System.out.println(whitebags.get(2).getName() + whitebags.get(2).getFullness() + " " + whitebags.get(2).getPebbles());
     }
 
 
@@ -68,31 +61,32 @@ public class PebbleGame {
             players.add(makePlayer());
         }
 
-        int maxPebbles = 11*players.size();
+        int maxPebbles = 11 * players.size();
 
         // Instantiates the three BlackBags with their random pebble weights
         blackbags.add(BlackBag.makeBlackBag("X", maxPebbles));
         blackbags.add(BlackBag.makeBlackBag("Y", maxPebbles));
         blackbags.add(BlackBag.makeBlackBag("Z", maxPebbles));
-        
+
         // Instantiates the three empty WhiteBags
         whitebags.add(new WhiteBag("A", maxPebbles, 0));
         whitebags.add(new WhiteBag("B", maxPebbles, 0));
         whitebags.add(new WhiteBag("C", maxPebbles, 0));
 
-
-        /* Currently players take turns to takePebbles but 
-        We need them to happen at the same time w/threading */
+        /*
+         * Currently players take turns to takePebbles but We need them to happen at the
+         * same time w/threading
+         */
         for (Player P : players) {
-            int rBag = r.nextInt(3);
+            int rBag = r.nextInt(blackbags.size());
             BlackBag XYZ = blackbags.get(rBag);
             P.lastdrawn = rBag;
             for (int i = 0; i < 10; i++) {
                 takePebble(P, XYZ);
-                }
-            System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
             }
+        }
     }
+
 
     // Player static nested class
     static class Player {
@@ -101,12 +95,15 @@ public class PebbleGame {
         private ArrayList<Integer> pebbles;
         private int total;
         private int lastdrawn;
+        PrintStream fileOut;
 
         Player() {
             pebbles = new ArrayList<>();
             id += 1;
             this.name = "Player" + id;
             this.total = 0;
+            try {fileOut = new PrintStream("./outputs/" + name + "_Output.txt");
+              } catch (FileNotFoundException e) {e.printStackTrace();}
         }
 
         String getName() {
@@ -141,12 +138,19 @@ public class PebbleGame {
         WhiteBag W = whitebags.get(P.getLastDrawn());
         discardPebble(P, W);
       
-        int rBag = r.nextInt(3);
+        int rBag = r.nextInt(blackbags.size());
         BlackBag B = blackbags.get(rBag);
         P.lastdrawn = rBag;
 
+        // Checks if BlackBag is empty
         if (B.getFullness() <= 0) {
             WhiteBag.emptyWhiteBag(whitebags.get(rBag), B);
+
+            // If still Empty remove Black and White Bag from ArrayLists
+            if (B.getFullness() <= 0) {
+                blackbags.remove(rBag);
+                whitebags.remove(rBag);
+            }
         }
 
         takePebble(P, B);
@@ -166,8 +170,9 @@ public class PebbleGame {
             P.total += pebble;
         }
 
-        System.out.println(P.getName() + " has drawn a " + cPeb + " from Black Bag " + B.getName());
-        System.out.println(P.getName() + " " + P.getPebbles() + " " + P.getTotal());
+
+        P.fileOut.println(P.getName() + " has drawn a " + cPeb + " from Black Bag " + B.getName());
+        P.fileOut.println(P.getName() + " hand is " + P.getPebbles() + " = " + P.getTotal());
         return P;
     }
 
@@ -188,11 +193,8 @@ public class PebbleGame {
         W.getPebbles().add(biggestpeb);
         W.setFullness(W.getFullness()+1);
 
-        System.out.println(P.getName() + " has discarded " + biggestpeb + " to White Bag " + W.getName());
-        System.out.println(P.getName() + " " + P.getPebbles() + " " + (P.getTotal()-biggestpeb));
+        P.fileOut.println(P.getName() + " has discarded " + biggestpeb + " to White Bag " + W.getName());
+        P.fileOut.println(P.getName() + " hand is " + P.getPebbles() + " = " + (P.getTotal() - biggestpeb));
         return P;
     }
-
-
-    static Random r = new Random();
 }

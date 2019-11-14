@@ -1,0 +1,44 @@
+Player1 has drawn a 15 from Black Bag X
+Player1 hand is [15] = 15
+Player1 has drawn a 4 from Black Bag X
+Player1 hand is [15, 4] = 19
+Player1 has drawn a 9 from Black Bag X
+Player1 hand is [15, 4, 9] = 28
+Player1 has drawn a 2 from Black Bag X
+Player1 hand is [15, 4, 9, 2] = 30
+Player1 has drawn a 8 from Black Bag X
+Player1 hand is [15, 4, 9, 2, 8] = 38
+Player1 has drawn a 13 from Black Bag X
+Player1 hand is [15, 4, 9, 2, 8, 13] = 51
+Player1 has drawn a 4 from Black Bag X
+Player1 hand is [15, 4, 9, 2, 8, 13, 4] = 55
+Player1 has drawn a 17 from Black Bag X
+Player1 hand is [15, 4, 9, 2, 8, 13, 4, 17] = 72
+Player1 has drawn a 6 from Black Bag X
+Player1 hand is [15, 4, 9, 2, 8, 13, 4, 17, 6] = 78
+Player1 has drawn a 12 from Black Bag X
+Player1 hand is [15, 4, 9, 2, 8, 13, 4, 17, 6, 12] = 90
+Player1 has discarded 6 to White Bag A
+Player1 hand is [15, 4, 9, 2, 8, 13, 4, 17, 12] = 84
+Player1 has drawn a 8 from Black Bag X
+Player1 hand is [15, 4, 9, 2, 8, 13, 4, 17, 12, 8] = 92
+Player1 has discarded 4 to White Bag A
+Player1 hand is [15, 4, 9, 2, 8, 13, 17, 12, 8] = 88
+Player1 has drawn a 10 from Black Bag Y
+Player1 hand is [15, 4, 9, 2, 8, 13, 17, 12, 8, 10] = 98
+Player1 has discarded 15 to White Bag B
+Player1 hand is [4, 9, 2, 8, 13, 17, 12, 8, 10] = 83
+Player1 has drawn a 14 from Black Bag Y
+Player1 hand is [4, 9, 2, 8, 13, 17, 12, 8, 10, 14] = 97
+Player1 has discarded 2 to White Bag B
+Player1 hand is [4, 9, 8, 13, 17, 12, 8, 10, 14] = 95
+Player1 has drawn a 11 from Black Bag Z
+Player1 hand is [4, 9, 8, 13, 17, 12, 8, 10, 14, 11] = 106
+Player1 has discarded 17 to White Bag C
+Player1 hand is [4, 9, 8, 13, 12, 8, 10, 14, 11] = 89
+Player1 has drawn a 16 from Black Bag X
+Player1 hand is [4, 9, 8, 13, 12, 8, 10, 14, 11, 16] = 105
+Player1 has discarded 16 to White Bag A
+Player1 hand is [4, 9, 8, 13, 12, 8, 10, 14, 11] = 89
+Player1 has drawn a 15 from Black Bag Z
+Player1 hand is [4, 9, 8, 13, 12, 8, 10, 14, 11, 15] = 104

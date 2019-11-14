@@ -1,0 +1,40 @@
+Player3 has drawn a 19 from Black Bag Z
+Player3 hand is [19] = 19
+Player3 has drawn a 3 from Black Bag Z
+Player3 hand is [19, 3] = 22
+Player3 has drawn a 7 from Black Bag Z
+Player3 hand is [19, 3, 7] = 29
+Player3 has drawn a 14 from Black Bag Z
+Player3 hand is [19, 3, 7, 14] = 43
+Player3 has drawn a 17 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17] = 60
+Player3 has drawn a 8 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17, 8] = 68
+Player3 has drawn a 4 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17, 8, 4] = 72
+Player3 has drawn a 13 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13] = 85
+Player3 has drawn a 1 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1] = 86
+Player3 has drawn a 6 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1, 6] = 92
+Player3 has discarded 6 to White Bag C
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1] = 86
+Player3 has drawn a 5 from Black Bag X
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1, 5] = 91
+Player3 has discarded 5 to White Bag A
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1] = 86
+Player3 has drawn a 2 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1, 2] = 88
+Player3 has discarded 2 to White Bag C
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1] = 86
+Player3 has drawn a 12 from Black Bag Z
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 1, 12] = 98
+Player3 has discarded 1 to White Bag C
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 12] = 97
+Player3 has drawn a 7 from Black Bag X
+Player3 hand is [19, 3, 7, 14, 17, 8, 4, 13, 12, 7] = 104
+Player3 has discarded 19 to White Bag A
+Player3 hand is [3, 7, 14, 17, 8, 4, 13, 12, 7] = 85
+Player3 has drawn a 11 from Black Bag X
+Player3 hand is [3, 7, 14, 17, 8, 4, 13, 12, 7, 11] = 96

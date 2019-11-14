@@ -14,13 +14,14 @@ public class WhiteBag extends Bag {
     }
 
 
-    public static BlackBag emptyWhiteBag(WhiteBag W, BlackBag B) {
-        for (int pebble : W.getPebbles()) {
-            B.getPebbles().add(pebble);
+    public static void emptyWhiteBag(WhiteBag W, BlackBag B) {
+        if (W.getPebbles().size() > 0) {
+            for (int pebble : W.getPebbles()) {
+                B.getPebbles().add(pebble);
+            }
+            W.getPebbles().clear();
+            B.setFullness(B.getPebbles().size());
         }
-        W.getPebbles().clear();
-        B.setFullness(B.getPebbles().size());
-        return B;
     }
 
 
