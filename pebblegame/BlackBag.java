@@ -48,7 +48,7 @@ public class BlackBag extends Bag {
                     finished = true;                
                     
                 } catch (IOException e) {
-                    System.out.println("Error, ind File");
+                    System.out.println("Error, invalid File");
                     possWeights.clear();
                 } finally {
                     try {
