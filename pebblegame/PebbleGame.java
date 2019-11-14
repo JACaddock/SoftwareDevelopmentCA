@@ -136,7 +136,6 @@ public class PebbleGame {
 
     // Method for taking turns
     private static Player takeTurn(Player P) {
-
         WhiteBag W = whitebags.get(P.getLastDrawn());
         discardPebble(P, W);
       
@@ -165,13 +164,14 @@ public class PebbleGame {
     private static Player takePebble(Player P, BlackBag B) {
         int rPeb = r.nextInt(B.getFullness());
         int cPeb = B.getPebbles().remove(rPeb);
+
         P.getPebbles().add(cPeb);
         B.setFullness(B.getFullness()-1);
         P.total = 0;
+
         for (int pebble : P.getPebbles()) {
             P.total += pebble;
         }
-
 
         P.fileOut.println(P.getName() + " has drawn a " + cPeb + " from Black Bag " + B.getName());
         P.fileOut.println(P.getName() + " hand is " + P.getPebbles() + " = " + P.getTotal());
@@ -184,6 +184,7 @@ public class PebbleGame {
         int counter = 0;
         int index = 0;
         int lastpeb = 0;
+        
         for (int pebble : P.getPebbles()) {
             if (pebble > lastpeb && 100 - P.getTotal() < 0 || pebble < (100 - P.getTotal())) {
                 index = counter;
