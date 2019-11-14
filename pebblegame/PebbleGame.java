@@ -1,6 +1,6 @@
 package pebblegame;
 
-
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -57,6 +57,8 @@ public class PebbleGame {
 
     // The startup of the game, creates players, bags and pebbles
     public static void startGame(int number) {
+        new File("outputs").mkdirs();
+
         for (int i = 0; i < number; i++) {
             players.add(makePlayer());
         }
