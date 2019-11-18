@@ -8,7 +8,7 @@ public class WhiteBag extends Bag {
     private ArrayList<Integer> pebbles;
 
 
-    public WhiteBag(String name, int max, int fullness) {
+    public WhiteBag(String name, int fullness) {
         super(name, fullness);
         this.pebbles = new ArrayList<>();
     }

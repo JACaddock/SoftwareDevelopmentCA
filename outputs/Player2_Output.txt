@@ -1,24 +1,20 @@
-Player2 has drawn a 19 from Black Bag Y
-Player2 hand is [19] = 19
-Player2 has drawn a 24 from Black Bag Y
-Player2 hand is [19, 24] = 43
-Player2 has drawn a 20 from Black Bag Y
-Player2 hand is [19, 24, 20] = 63
-Player2 has drawn a 9 from Black Bag Y
-Player2 hand is [19, 24, 20, 9] = 72
-Player2 has drawn a 7 from Black Bag Y
-Player2 hand is [19, 24, 20, 9, 7] = 79
-Player2 has drawn a 6 from Black Bag Y
-Player2 hand is [19, 24, 20, 9, 7, 6] = 85
-Player2 has drawn a 28 from Black Bag Y
-Player2 hand is [19, 24, 20, 9, 7, 6, 28] = 113
-Player2 has drawn a 25 from Black Bag Y
-Player2 hand is [19, 24, 20, 9, 7, 6, 28, 25] = 138
-Player2 has drawn a 26 from Black Bag Y
-Player2 hand is [19, 24, 20, 9, 7, 6, 28, 25, 26] = 164
-Player2 has drawn a 21 from Black Bag Y
-Player2 hand is [19, 24, 20, 9, 7, 6, 28, 25, 26, 21] = 185
-Player2 has discarded 28 to White Bag B
-Player2 hand is [19, 24, 20, 9, 7, 6, 25, 26, 21] = 157
-Player2 has drawn a 29 from Black Bag X
-Player2 hand is [19, 24, 20, 9, 7, 6, 25, 26, 21, 29] = 186
+Player2 has drawn a 48 from Black Bag X
+Player2 hand is [48] = 48
+Player2 has drawn a 5 from Black Bag X
+Player2 hand is [48, 5] = 53
+Player2 has drawn a 93 from Black Bag X
+Player2 hand is [48, 5, 93] = 146
+Player2 has drawn a 45 from Black Bag X
+Player2 hand is [48, 5, 93, 45] = 191
+Player2 has drawn a 60 from Black Bag X
+Player2 hand is [48, 5, 93, 45, 60] = 251
+Player2 has drawn a 99 from Black Bag X
+Player2 hand is [48, 5, 93, 45, 60, 99] = 350
+Player2 has drawn a 61 from Black Bag X
+Player2 hand is [48, 5, 93, 45, 60, 99, 61] = 411
+Player2 has drawn a 90 from Black Bag X
+Player2 hand is [48, 5, 93, 45, 60, 99, 61, 90] = 501
+Player2 has drawn a 49 from Black Bag X
+Player2 hand is [48, 5, 93, 45, 60, 99, 61, 90, 49] = 550
+Player2 has drawn a 16 from Black Bag X
+Player2 hand is [48, 5, 93, 45, 60, 99, 61, 90, 49, 16] = 566

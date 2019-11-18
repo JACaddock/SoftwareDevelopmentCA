@@ -16,12 +16,14 @@ public class BlackBag extends Bag {
         this.pebbles = pebbles;
     }
 
+    
     // Method for instantiating a BlackBag
-    public static BlackBag makeBlackBag(String name, int max) {
-        ArrayList<Integer> possWeights = new ArrayList<>();
+    public static BlackBag makeBlackBag(String name, int min) {
+        ArrayList<Integer> pebbles = new ArrayList<>();
         boolean finished = false;
         Scanner textfile;
         String textlocation;
+
         do {
             try {
                 System.out.print("Please enter the path to the text file for Black Bag " + name + " : ");
@@ -42,42 +44,30 @@ public class BlackBag extends Bag {
                         for (int index = 0; index < parts.length; index++) {
                             if (Integer.parseInt(parts[index]) <= 0) {
                                 br.close();
-                            } possWeights.add(Integer.parseInt(parts[index]));
+                            } pebbles.add(Integer.parseInt(parts[index]));
                         }
                     }
-                    finished = true;                
+                    if (pebbles.size() >= min){
+                        finished = true;
+                    } else {
+                        System.out.println("Error, File too small");
+                        pebbles.clear();}       
                     
                 } catch (IOException e) {
                     System.out.println("Error, invalid File");
-                    possWeights.clear();
+                    pebbles.clear();
                 } finally {
                     try {
                         br.close();
                     } catch (IOException | NullPointerException e1) {
-                        possWeights.clear();} 
+                        pebbles.clear();} 
                 }
             } catch (StringIndexOutOfBoundsException e) {
                 System.out.println("Error, invalid Input");
-                possWeights.clear();}
+                pebbles.clear();}
         } while (!finished);
 
-
-        ArrayList<Integer> pebbles = new ArrayList<>();
-        /*for (int count = 0; count < max; count++) {
-            // Adds a random number from the possible weights imported from the text file
-            pebbles.add(possWeights.get(r.nextInt(possWeights.size())));
-        } */
-
-        int index = 0;
-        for (int count = 0; count < max; count++) {
-            if (index >= possWeights.size()) {
-                index = 0;
-            }
-            pebbles.add(possWeights.get(index));
-            index += 1;
-        }
-
-        BlackBag X = new BlackBag(name, max, pebbles);
+        BlackBag X = new BlackBag(name, pebbles.size(), pebbles);
 
         return X;
     }
