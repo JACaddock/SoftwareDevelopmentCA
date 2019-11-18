@@ -1,24 +1,24 @@
-Player1 has drawn a 33 from Black Bag Y
-Player1 hand is [33] = 33
-Player1 has drawn a 75 from Black Bag Y
-Player1 hand is [33, 75] = 108
-Player1 has drawn a 41 from Black Bag Y
-Player1 hand is [33, 75, 41] = 149
-Player1 has drawn a 45 from Black Bag Y
-Player1 hand is [33, 75, 41, 45] = 194
-Player1 has drawn a 23 from Black Bag Y
-Player1 hand is [33, 75, 41, 45, 23] = 217
-Player1 has drawn a 9 from Black Bag Y
-Player1 hand is [33, 75, 41, 45, 23, 9] = 226
-Player1 has drawn a 76 from Black Bag Y
-Player1 hand is [33, 75, 41, 45, 23, 9, 76] = 302
-Player1 has drawn a 16 from Black Bag Y
-Player1 hand is [33, 75, 41, 45, 23, 9, 76, 16] = 318
-Player1 has drawn a 10 from Black Bag Y
-Player1 hand is [33, 75, 41, 45, 23, 9, 76, 16, 10] = 328
-Player1 has drawn a 77 from Black Bag Y
-Player1 hand is [33, 75, 41, 45, 23, 9, 76, 16, 10, 77] = 405
-Player1 has discarded 77 to White Bag B
-Player1 hand is [33, 75, 41, 45, 23, 9, 76, 16, 10] = 328
-Player1 has drawn a 14 from Black Bag X
-Player1 hand is [33, 75, 41, 45, 23, 9, 76, 16, 10, 14] = 342
+Player1 has drawn a 19 from Black Bag Z
+Player1 hand is [19] = 19
+Player1 has drawn a 36 from Black Bag Z
+Player1 hand is [19, 36] = 55
+Player1 has drawn a 43 from Black Bag Z
+Player1 hand is [19, 36, 43] = 98
+Player1 has drawn a 23 from Black Bag Z
+Player1 hand is [19, 36, 43, 23] = 121
+Player1 has drawn a 56 from Black Bag Z
+Player1 hand is [19, 36, 43, 23, 56] = 177
+Player1 has drawn a 98 from Black Bag Z
+Player1 hand is [19, 36, 43, 23, 56, 98] = 275
+Player1 has drawn a 66 from Black Bag Z
+Player1 hand is [19, 36, 43, 23, 56, 98, 66] = 341
+Player1 has drawn a 2 from Black Bag Z
+Player1 hand is [19, 36, 43, 23, 56, 98, 66, 2] = 343
+Player1 has drawn a 91 from Black Bag Z
+Player1 hand is [19, 36, 43, 23, 56, 98, 66, 2, 91] = 434
+Player1 has drawn a 10 from Black Bag Z
+Player1 hand is [19, 36, 43, 23, 56, 98, 66, 2, 91, 10] = 444
+Player1 has discarded 98 to White Bag C
+Player1 hand is [19, 36, 43, 23, 56, 66, 2, 91, 10] = 346
+Player1 has drawn a 74 from Black Bag Z
+Player1 hand is [19, 36, 43, 23, 56, 66, 2, 91, 10, 74] = 420

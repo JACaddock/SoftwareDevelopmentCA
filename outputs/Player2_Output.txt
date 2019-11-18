@@ -1,20 +1,480 @@
-Player2 has drawn a 48 from Black Bag X
-Player2 hand is [48] = 48
-Player2 has drawn a 5 from Black Bag X
-Player2 hand is [48, 5] = 53
-Player2 has drawn a 93 from Black Bag X
-Player2 hand is [48, 5, 93] = 146
+Player2 has drawn a 96 from Black Bag Z
+Player2 hand is [96] = 96
+Player2 has drawn a 53 from Black Bag Z
+Player2 hand is [96, 53] = 149
+Player2 has drawn a 11 from Black Bag Z
+Player2 hand is [96, 53, 11] = 160
+Player2 has drawn a 5 from Black Bag Z
+Player2 hand is [96, 53, 11, 5] = 165
+Player2 has drawn a 63 from Black Bag Z
+Player2 hand is [96, 53, 11, 5, 63] = 228
+Player2 has drawn a 42 from Black Bag Z
+Player2 hand is [96, 53, 11, 5, 63, 42] = 270
+Player2 has drawn a 51 from Black Bag Z
+Player2 hand is [96, 53, 11, 5, 63, 42, 51] = 321
+Player2 has drawn a 77 from Black Bag Z
+Player2 hand is [96, 53, 11, 5, 63, 42, 51, 77] = 398
+Player2 has drawn a 33 from Black Bag Z
+Player2 hand is [96, 53, 11, 5, 63, 42, 51, 77, 33] = 431
+Player2 has drawn a 89 from Black Bag Z
+Player2 hand is [96, 53, 11, 5, 63, 42, 51, 77, 33, 89] = 520
+Player2 has discarded 96 to White Bag C
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 89] = 424
+Player2 has drawn a 78 from Black Bag X
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 89, 78] = 502
+Player2 has discarded 89 to White Bag A
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 78] = 413
+Player2 has drawn a 69 from Black Bag X
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 78, 69] = 482
+Player2 has discarded 78 to White Bag A
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 69] = 404
+Player2 has drawn a 84 from Black Bag Y
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 69, 84] = 488
+Player2 has discarded 84 to White Bag B
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 69] = 404
 Player2 has drawn a 45 from Black Bag X
-Player2 hand is [48, 5, 93, 45] = 191
-Player2 has drawn a 60 from Black Bag X
-Player2 hand is [48, 5, 93, 45, 60] = 251
-Player2 has drawn a 99 from Black Bag X
-Player2 hand is [48, 5, 93, 45, 60, 99] = 350
+Player2 hand is [53, 11, 5, 63, 42, 51, 77, 33, 69, 45] = 449
+Player2 has discarded 77 to White Bag A
+Player2 hand is [53, 11, 5, 63, 42, 51, 33, 69, 45] = 372
+Player2 has drawn a 84 from Black Bag X
+Player2 hand is [53, 11, 5, 63, 42, 51, 33, 69, 45, 84] = 456
+Player2 has discarded 84 to White Bag A
+Player2 hand is [53, 11, 5, 63, 42, 51, 33, 69, 45] = 372
+Player2 has drawn a 63 from Black Bag Y
+Player2 hand is [53, 11, 5, 63, 42, 51, 33, 69, 45, 63] = 435
+Player2 has discarded 69 to White Bag B
+Player2 hand is [53, 11, 5, 63, 42, 51, 33, 45, 63] = 366
+Player2 has drawn a 7 from Black Bag Y
+Player2 hand is [53, 11, 5, 63, 42, 51, 33, 45, 63, 7] = 373
+Player2 has discarded 63 to White Bag B
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 63, 7] = 310
+Player2 has drawn a 7 from Black Bag X
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 63, 7, 7] = 317
+Player2 has discarded 63 to White Bag A
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 7, 7] = 254
+Player2 has drawn a 70 from Black Bag Y
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 7, 7, 70] = 324
+Player2 has discarded 70 to White Bag B
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 7, 7] = 254
+Player2 has drawn a 81 from Black Bag X
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 7, 7, 81] = 335
+Player2 has discarded 81 to White Bag A
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 7, 7] = 254
+Player2 has drawn a 39 from Black Bag X
+Player2 hand is [53, 11, 5, 42, 51, 33, 45, 7, 7, 39] = 293
+Player2 has discarded 53 to White Bag A
+Player2 hand is [11, 5, 42, 51, 33, 45, 7, 7, 39] = 240
+Player2 has drawn a 62 from Black Bag Z
+Player2 hand is [11, 5, 42, 51, 33, 45, 7, 7, 39, 62] = 302
+Player2 has discarded 62 to White Bag C
+Player2 hand is [11, 5, 42, 51, 33, 45, 7, 7, 39] = 240
+Player2 has drawn a 48 from Black Bag X
+Player2 hand is [11, 5, 42, 51, 33, 45, 7, 7, 39, 48] = 288
+Player2 has discarded 51 to White Bag A
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 48] = 237
+Player2 has drawn a 92 from Black Bag X
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 48, 92] = 329
+Player2 has discarded 92 to White Bag A
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 48] = 237
+Player2 has drawn a 97 from Black Bag X
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 48, 97] = 334
+Player2 has discarded 97 to White Bag A
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 48] = 237
+Player2 has drawn a 34 from Black Bag Z
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 48, 34] = 271
+Player2 has discarded 48 to White Bag C
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34] = 223
+Player2 has drawn a 97 from Black Bag Y
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34, 97] = 320
+Player2 has discarded 97 to White Bag B
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34] = 223
+Player2 has drawn a 58 from Black Bag X
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34, 58] = 281
+Player2 has discarded 58 to White Bag A
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34] = 223
+Player2 has drawn a 68 from Black Bag Z
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34, 68] = 291
+Player2 has discarded 68 to White Bag C
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34] = 223
+Player2 has drawn a 67 from Black Bag X
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34, 67] = 290
+Player2 has discarded 67 to White Bag A
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34] = 223
+Player2 has drawn a 16 from Black Bag Z
+Player2 hand is [11, 5, 42, 33, 45, 7, 7, 39, 34, 16] = 239
+Player2 has discarded 45 to White Bag C
+Player2 hand is [11, 5, 42, 33, 7, 7, 39, 34, 16] = 194
+Player2 has drawn a 14 from Black Bag Y
+Player2 hand is [11, 5, 42, 33, 7, 7, 39, 34, 16, 14] = 208
+Player2 has discarded 42 to White Bag B
+Player2 hand is [11, 5, 33, 7, 7, 39, 34, 16, 14] = 166
+Player2 has drawn a 85 from Black Bag Y
+Player2 hand is [11, 5, 33, 7, 7, 39, 34, 16, 14, 85] = 251
+Player2 has discarded 85 to White Bag B
+Player2 hand is [11, 5, 33, 7, 7, 39, 34, 16, 14] = 166
+Player2 has drawn a 5 from Black Bag Y
+Player2 hand is [11, 5, 33, 7, 7, 39, 34, 16, 14, 5] = 171
+Player2 has discarded 39 to White Bag B
+Player2 hand is [11, 5, 33, 7, 7, 34, 16, 14, 5] = 132
+Player2 has drawn a 27 from Black Bag X
+Player2 hand is [11, 5, 33, 7, 7, 34, 16, 14, 5, 27] = 159
+Player2 has discarded 34 to White Bag A
+Player2 hand is [11, 5, 33, 7, 7, 16, 14, 5, 27] = 125
+Player2 has drawn a 29 from Black Bag Z
+Player2 hand is [11, 5, 33, 7, 7, 16, 14, 5, 27, 29] = 154
+Player2 has discarded 33 to White Bag C
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29] = 121
+Player2 has drawn a 100 from Black Bag X
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29, 100] = 221
+Player2 has discarded 100 to White Bag A
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29] = 121
+Player2 has drawn a 82 from Black Bag Y
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29, 82] = 203
+Player2 has discarded 82 to White Bag B
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29] = 121
+Player2 has drawn a 93 from Black Bag X
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29, 93] = 214
+Player2 has discarded 93 to White Bag A
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29] = 121
+Player2 has drawn a 86 from Black Bag X
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29, 86] = 207
+Player2 has discarded 86 to White Bag A
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29] = 121
+Player2 has drawn a 60 from Black Bag Z
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29, 60] = 181
+Player2 has discarded 60 to White Bag C
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29] = 121
+Player2 has drawn a 80 from Black Bag X
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29, 80] = 201
+Player2 has discarded 80 to White Bag A
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29] = 121
+Player2 has drawn a 3 from Black Bag Z
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 29, 3] = 124
+Player2 has discarded 29 to White Bag C
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3] = 95
+Player2 has drawn a 37 from Black Bag X
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3, 37] = 132
+Player2 has discarded 37 to White Bag A
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3] = 95
+Player2 has drawn a 51 from Black Bag Y
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3, 51] = 146
+Player2 has discarded 51 to White Bag B
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3] = 95
+Player2 has drawn a 57 from Black Bag X
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3, 57] = 152
+Player2 has discarded 57 to White Bag A
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3] = 95
+Player2 has drawn a 2 from Black Bag X
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3, 2] = 97
+Player2 has discarded 2 to White Bag A
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3] = 95
+Player2 has drawn a 46 from Black Bag Z
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3, 46] = 141
+Player2 has discarded 46 to White Bag C
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3] = 95
+Player2 has drawn a 4 from Black Bag Y
+Player2 hand is [11, 5, 7, 7, 16, 14, 5, 27, 3, 4] = 99
+Player2 has discarded 11 to White Bag B
+Player2 hand is [5, 7, 7, 16, 14, 5, 27, 3, 4] = 88
+Player2 has drawn a 62 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 27, 3, 4, 62] = 150
+Player2 has discarded 62 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 27, 3, 4] = 88
+Player2 has drawn a 14 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 27, 3, 4, 14] = 102
+Player2 has discarded 27 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 35 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 35] = 110
+Player2 has discarded 35 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 34 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 34] = 109
+Player2 has discarded 34 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 3 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 3] = 78
+Player2 has discarded 3 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 32 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 32] = 107
+Player2 has discarded 32 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 45 from Black Bag Y
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 45] = 120
+Player2 has discarded 45 to White Bag B
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 68 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 68] = 143
+Player2 has discarded 68 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 85 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 85] = 160
+Player2 has discarded 85 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 79 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 79] = 154
+Player2 has discarded 79 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 59 from Black Bag Y
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 59] = 134
+Player2 has discarded 59 to White Bag B
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 61 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 61] = 136
+Player2 has discarded 61 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 33 from Black Bag Y
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 33] = 108
+Player2 has discarded 33 to White Bag B
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 4 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 4] = 79
+Player2 has discarded 4 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 46 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 46] = 121
+Player2 has discarded 46 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 66 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 66] = 141
+Player2 has discarded 66 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 45 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 45] = 120
+Player2 has discarded 45 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14] = 75
+Player2 has drawn a 20 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 4, 14, 20] = 95
+Player2 has discarded 4 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 20] = 91
+Player2 has drawn a 18 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 20, 18] = 109
+Player2 has discarded 20 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 18] = 89
+Player2 has drawn a 70 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 18, 70] = 159
+Player2 has discarded 70 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 18] = 89
+Player2 has drawn a 44 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 18, 44] = 133
+Player2 has discarded 44 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 18] = 89
+Player2 has drawn a 6 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 3, 14, 18, 6] = 95
+Player2 has discarded 3 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6] = 92
+Player2 has drawn a 38 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6, 38] = 130
+Player2 has discarded 38 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6] = 92
+Player2 has drawn a 65 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6, 65] = 157
+Player2 has discarded 65 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6] = 92
+Player2 has drawn a 95 from Black Bag Y
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6, 95] = 187
+Player2 has discarded 95 to White Bag B
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6] = 92
+Player2 has drawn a 32 from Black Bag X
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6, 32] = 124
+Player2 has discarded 32 to White Bag A
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6] = 92
+Player2 has drawn a 15 from Black Bag Y
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 18, 6, 15] = 107
+Player2 has discarded 18 to White Bag B
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 6, 15] = 89
+Player2 has drawn a 62 from Black Bag Y
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 6, 15, 62] = 151
+Player2 has discarded 62 to White Bag B
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 6, 15] = 89
+Player2 has drawn a 80 from Black Bag Z
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 6, 15, 80] = 169
+Player2 has discarded 80 to White Bag C
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 6, 15] = 89
+Player2 has drawn a 13 from Black Bag Y
+Player2 hand is [5, 7, 7, 16, 14, 5, 14, 6, 15, 13] = 102
+Player2 has discarded 16 to White Bag B
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13] = 86
+Player2 has drawn a 37 from Black Bag Y
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13, 37] = 123
+Player2 has discarded 37 to White Bag B
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13] = 86
+Player2 has drawn a 5 from Black Bag X
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13, 5] = 91
+Player2 has discarded 5 to White Bag A
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13] = 86
+Player2 has drawn a 38 from Black Bag Y
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13, 38] = 124
+Player2 has discarded 38 to White Bag B
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13] = 86
+Player2 has drawn a 10 from Black Bag X
+Player2 hand is [5, 7, 7, 14, 5, 14, 6, 15, 13, 10] = 96
+Player2 has discarded 5 to White Bag A
+Player2 hand is [7, 7, 14, 5, 14, 6, 15, 13, 10] = 91
+Player2 has drawn a 12 from Black Bag X
+Player2 hand is [7, 7, 14, 5, 14, 6, 15, 13, 10, 12] = 103
+Player2 has discarded 15 to White Bag A
+Player2 hand is [7, 7, 14, 5, 14, 6, 13, 10, 12] = 88
+Player2 has drawn a 75 from Black Bag Z
+Player2 hand is [7, 7, 14, 5, 14, 6, 13, 10, 12, 75] = 163
+Player2 has discarded 75 to White Bag C
+Player2 hand is [7, 7, 14, 5, 14, 6, 13, 10, 12] = 88
+Player2 has drawn a 11 from Black Bag X
+Player2 hand is [7, 7, 14, 5, 14, 6, 13, 10, 12, 11] = 99
+Player2 has discarded 7 to White Bag A
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 46 from Black Bag Y
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 46] = 138
+Player2 has discarded 46 to White Bag B
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 91 from Black Bag X
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 91] = 183
+Player2 has discarded 91 to White Bag A
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 59 from Black Bag X
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 59] = 151
+Player2 has discarded 59 to White Bag A
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 56 from Black Bag Y
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 56] = 148
+Player2 has discarded 56 to White Bag B
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 54 from Black Bag Y
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 54] = 146
+Player2 has discarded 54 to White Bag B
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 99 from Black Bag Z
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 99] = 191
+Player2 has discarded 99 to White Bag C
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 1 from Black Bag X
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 1] = 93
+Player2 has discarded 1 to White Bag A
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 63 from Black Bag X
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 63] = 155
+Player2 has discarded 63 to White Bag A
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 15 from Black Bag X
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 15] = 107
+Player2 has discarded 15 to White Bag A
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 31 from Black Bag Z
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 31] = 123
+Player2 has discarded 31 to White Bag C
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11] = 92
+Player2 has drawn a 13 from Black Bag X
+Player2 hand is [7, 14, 5, 14, 6, 13, 10, 12, 11, 13] = 105
+Player2 has discarded 14 to White Bag A
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 18 from Black Bag X
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 18] = 109
+Player2 has discarded 18 to White Bag A
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 50 from Black Bag Z
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 50] = 141
+Player2 has discarded 50 to White Bag C
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 65 from Black Bag Z
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 65] = 156
+Player2 has discarded 65 to White Bag C
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 66 from Black Bag Y
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 66] = 157
+Player2 has discarded 66 to White Bag B
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 49 from Black Bag Y
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 49] = 140
+Player2 has discarded 49 to White Bag B
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 52 from Black Bag X
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 52] = 143
+Player2 has discarded 52 to White Bag A
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 72 from Black Bag Z
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 72] = 163
+Player2 has discarded 72 to White Bag C
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 67 from Black Bag Z
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 67] = 158
+Player2 has discarded 67 to White Bag C
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 78 from Black Bag Z
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 78] = 169
+Player2 has discarded 78 to White Bag C
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13] = 91
+Player2 has drawn a 8 from Black Bag X
+Player2 hand is [7, 5, 14, 6, 13, 10, 12, 11, 13, 8] = 99
+Player2 has discarded 7 to White Bag A
+Player2 hand is [5, 14, 6, 13, 10, 12, 11, 13, 8] = 92
+Player2 has drawn a 20 from Black Bag Z
+Player2 hand is [5, 14, 6, 13, 10, 12, 11, 13, 8, 20] = 112
+Player2 has discarded 20 to White Bag C
+Player2 hand is [5, 14, 6, 13, 10, 12, 11, 13, 8] = 92
+Player2 has drawn a 6 from Black Bag Z
+Player2 hand is [5, 14, 6, 13, 10, 12, 11, 13, 8, 6] = 98
+Player2 has discarded 5 to White Bag C
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6] = 93
+Player2 has drawn a 50 from Black Bag Y
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6, 50] = 143
+Player2 has discarded 50 to White Bag B
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6] = 93
+Player2 has drawn a 39 from Black Bag Z
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6, 39] = 132
+Player2 has discarded 39 to White Bag C
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6] = 93
+Player2 has drawn a 96 from Black Bag Y
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6, 96] = 189
+Player2 has discarded 96 to White Bag B
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6] = 93
+Player2 has drawn a 74 from Black Bag X
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6, 74] = 167
+Player2 has discarded 74 to White Bag A
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6] = 93
+Player2 has drawn a 9 from Black Bag X
+Player2 hand is [14, 6, 13, 10, 12, 11, 13, 8, 6, 9] = 102
+Player2 has discarded 14 to White Bag A
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 55 from Black Bag Z
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 55] = 143
+Player2 has discarded 55 to White Bag C
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 47 from Black Bag Z
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 47] = 135
+Player2 has discarded 47 to White Bag C
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 17 from Black Bag Z
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 17] = 105
+Player2 has discarded 17 to White Bag C
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 67 from Black Bag Y
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 67] = 155
+Player2 has discarded 67 to White Bag B
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 39 from Black Bag Y
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 39] = 127
+Player2 has discarded 39 to White Bag B
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 36 from Black Bag X
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 36] = 124
+Player2 has discarded 36 to White Bag A
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 71 from Black Bag Z
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 71] = 159
+Player2 has discarded 71 to White Bag C
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
 Player2 has drawn a 61 from Black Bag X
-Player2 hand is [48, 5, 93, 45, 60, 99, 61] = 411
-Player2 has drawn a 90 from Black Bag X
-Player2 hand is [48, 5, 93, 45, 60, 99, 61, 90] = 501
-Player2 has drawn a 49 from Black Bag X
-Player2 hand is [48, 5, 93, 45, 60, 99, 61, 90, 49] = 550
-Player2 has drawn a 16 from Black Bag X
-Player2 hand is [48, 5, 93, 45, 60, 99, 61, 90, 49, 16] = 566
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 61] = 149
+Player2 has discarded 61 to White Bag A
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 90 from Black Bag Z
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 90] = 178
+Player2 has discarded 90 to White Bag C
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 34 from Black Bag Y
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 34] = 122
+Player2 has discarded 34 to White Bag B
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9] = 88
+Player2 has drawn a 12 from Black Bag Z
+Player2 hand is [6, 13, 10, 12, 11, 13, 8, 6, 9, 12] = 100

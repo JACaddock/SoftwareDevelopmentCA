@@ -5,12 +5,13 @@ import java.util.ArrayList;
 
 
 public class WhiteBag extends Bag {
-    private ArrayList<Integer> pebbles;
+    public WhiteBag(String name, int fullness, ArrayList<Integer> pebbles) {
+        super(name, fullness, pebbles);
+    }
 
 
-    public WhiteBag(String name, int fullness) {
-        super(name, fullness);
-        this.pebbles = new ArrayList<>();
+    public static WhiteBag makeWhiteBag(String name) {
+        return new WhiteBag(name, 0, new ArrayList<>());
     }
 
 
@@ -22,10 +23,5 @@ public class WhiteBag extends Bag {
             W.getPebbles().clear();
             B.setFullness(B.getPebbles().size());
         }
-    }
-
-
-    public ArrayList<Integer> getPebbles() {
-        return this.pebbles;
     }
 }
