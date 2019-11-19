@@ -188,6 +188,12 @@ public class PebbleGame {
         }
     }
 
+
+    /**
+     * gets the Number of players from user input
+     * @param input
+     * @return
+     */
     private static int getPlayerNum(Scanner input) {
         // The check for the number of players
         int playerNum = 1;
@@ -220,6 +226,13 @@ public class PebbleGame {
     }
 
 
+    /**
+     * This handles the users inputs for the text file
+     * @param name
+     * @param min
+     * @param textfile
+     * @return an arraylist full of pebbles
+     */
     private static ArrayList<Integer> getFileName(String name, int min, Scanner textfile) {
         ArrayList<Integer> pebbles = new ArrayList<>();
         boolean finished = false;
