@@ -20,34 +20,33 @@ public class PebbleGame {
     private volatile static boolean winner = false;
 
     // ArrayLists containing the varies objects
-    private static ArrayList<Player> players = new ArrayList<>();
-    private static ArrayList<Thread> threads = new ArrayList<>();
-    private static ArrayList<WhiteBag> whitebags = new ArrayList<>();
-    private static ArrayList<BlackBag> blackbags = new ArrayList<>();
+    private static final ArrayList<Player> players = new ArrayList<>();
+    private static final ArrayList<Thread> threads = new ArrayList<>();
+    private static final ArrayList<WhiteBag> whitebags = new ArrayList<>();
+    private static final ArrayList<BlackBag> blackbags = new ArrayList<>();
 
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int num = getPlayerNum(input);
-
-        ArrayList<Integer> x = getFileName("X", num, input);
-        ArrayList<Integer> y = getFileName("Y", num, input);
-        ArrayList<Integer> z = getFileName("Z", num, input);
-
-        input.close();
+        int num;
+        ArrayList<Integer> x;
+        ArrayList<Integer> y;
+        ArrayList<Integer> z;
+        try (Scanner input = new Scanner(System.in)) {
+            num = findPlayerNum(input);
+            x = findFileName("X", num, input);
+            y = findFileName("Y", num, input);
+            z = findFileName("Z", num, input);
+        }
 
         new PebbleGame(num, x, y, z);
     }
 
 
     public PebbleGame(int number, ArrayList<Integer> pebblesx, ArrayList<Integer> pebblesy, ArrayList<Integer> pebblesz) {
-
-        int minPebbles = 11 * number;
-
         // Instantiates the three BlackBags with their pebble weights, adds to ArrayList
-        blackbags.add(BlackBag.makeBlackBag("X", minPebbles, pebblesx));
-        blackbags.add(BlackBag.makeBlackBag("Y", minPebbles, pebblesy));
-        blackbags.add(BlackBag.makeBlackBag("Z", minPebbles, pebblesz));
+        blackbags.add(BlackBag.makeBlackBag("X", pebblesx));
+        blackbags.add(BlackBag.makeBlackBag("Y", pebblesy));
+        blackbags.add(BlackBag.makeBlackBag("Z", pebblesz));
 
 
         // Instantiates the three empty WhiteBags, adds to ArrayList
@@ -80,7 +79,7 @@ public class PebbleGame {
         private int total;
         private int lastdrawn;
         PrintStream fileOut;
-        Object lock;
+        final Object lock;
 
         Player(Object lock) {
             pebbles = new ArrayList<>();
@@ -110,29 +109,38 @@ public class PebbleGame {
         }
 
         /**
-         * Method for taking turns
+         * Method for taking turns and logging to an Output file
          */
-        void takeTurn() {
+        private void takeTurn() {
             synchronized (lock) {
                 WhiteBag W = whitebags.get(lastdrawn);
+                
                 discardPebble(W);
+                int discarded = W.getPebbles().get(W.getPebbles().size() - 1);
+                
+                // Logs the players discarded pebble and hand
+                fileOut.println(name + " has discarded " + discarded + " to White Bag " + W.getName());
+                fileOut.println(name + " hand is " + pebbles + " = " + (total - discarded));
+                
+                
+                BlackBag B;
+                int rBag;
+                
+                do {
+                    rBag = r.nextInt(blackbags.size());
+                    B = blackbags.get(rBag);
+                    lastdrawn = rBag;   
 
-                int rBag = r.nextInt(blackbags.size());
-                BlackBag B = blackbags.get(rBag);
-                lastdrawn = rBag;
-
-                // Checks if BlackBag is empty
-                if (B.getFullness() <= 0) {
+                    // Checks if BlackBag is empty
                     WhiteBag.emptyWhiteBag(whitebags.get(rBag), B);
-
-                    // If still Empty remove Black and White Bag from ArrayLists
-                    if (B.getFullness() <= 0) {
-                        blackbags.remove(rBag);
-                        whitebags.remove(rBag);
-                    }
-                }
+                } while (B.getPebbles().size() < 1);
 
                 takePebble(B);
+                int taken = pebbles.get(pebbles.size() - 1);
+            
+                // Logs the players drawn pebble and hand
+                fileOut.println(name + " has drawn a " + taken + " from Black Bag " + B.getName());
+                fileOut.println(name + " hand is " + pebbles + " = " + total);
 
                 if (total == 100) {
                     winner = true;
@@ -142,62 +150,44 @@ public class PebbleGame {
 
         /**
          * Method that randomly takes a pebble from a random black bag
-         * 
          * @param B the Chosen BlackBag object
          */
-        void takePebble(BlackBag B) {
-            int rPeb = r.nextInt(B.getFullness());
+        private void takePebble(BlackBag B) {
+            int rPeb = r.nextInt(B.getPebbles().size());
             int cPeb = B.getPebbles().remove(rPeb);
-
             pebbles.add(cPeb);
-            B.setFullness(B.getFullness() - 1);
+            
             total = 0;
-
             for (int pebble : pebbles) {
                 total += pebble;
             }
-
-            fileOut.println(name + " has drawn a " + cPeb + " from Black Bag " + B.getName());
-            fileOut.println(name + " hand is " + pebbles + " = " + total);
         }
 
         /**
          * Method that discards the biggest Pebble
-         * 
          * @param W the Chosen WhiteBag object
          */
-        void discardPebble(WhiteBag W) {
+        private void discardPebble(WhiteBag W) {
+            int lastpeb = 0;
             int counter = 0;
             int index = 0;
-            int lastpeb = 0;
 
             for (int pebble : pebbles) {
                 if (pebble > lastpeb && 100 - total < 0 || pebble < (100 - total)) {
-                    index = counter;
                     lastpeb = pebble;
-                }
-                counter += 1;
+                    index = counter;
+                } counter += 1;
             }
 
             int biggestpeb = pebbles.remove(index);
             W.getPebbles().add(biggestpeb);
-            W.setFullness(W.getFullness() + 1);
-
-            fileOut.println(name + " has discarded " + biggestpeb + " to White Bag " + W.getName());
-            fileOut.println(name + " hand is " + pebbles + " = " + (total - biggestpeb));
         }
     }
 
-
-    /**
-     * gets the Number of players from user input
-     * @param input
-     * @return
-     */
-    private static int getPlayerNum(Scanner input) {
+    private static int findPlayerNum(Scanner input) {
         // The check for the number of players
         int playerNum = 1;
-        String playerStr = "0";
+        String playerStr;
         do {
             try {
                 System.out.print("Please Enter the Number of players? : ");
@@ -226,14 +216,7 @@ public class PebbleGame {
     }
 
 
-    /**
-     * This handles the users inputs for the text file
-     * @param name
-     * @param min
-     * @param textfile
-     * @return an arraylist full of pebbles
-     */
-    private static ArrayList<Integer> getFileName(String name, int min, Scanner textfile) {
+    private static ArrayList<Integer> findFileName(String name, int min, Scanner textfile) {
         ArrayList<Integer> pebbles = new ArrayList<>();
         boolean finished = false;
         String textlocation;
@@ -272,7 +255,7 @@ public class PebbleGame {
                 } finally {
                     try {
                         br.close();
-                    } catch (IOException | NullPointerException e1) {
+                    } catch (IOException | NullPointerException e) {
                         pebbles.clear();} 
                 }
             } catch (StringIndexOutOfBoundsException e) {
