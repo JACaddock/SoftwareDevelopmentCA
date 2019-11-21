@@ -125,43 +125,39 @@ public class PebbleGame {
          */
         private void takeTurn() {
             synchronized (lock) {
-                ArrayList<Integer> oldpebs = (ArrayList<Integer>) pebbles.clone();
-                try {
-                    Bag W = whitebags.get(lastdrawn);
+                Bag W = whitebags.get(lastdrawn);
 
-                    discardPebble(W);
-                    int discarded = W.getPebbles().get(W.getPebbles().size() - 1);
+                discardPebble(W);
+                int discarded = W.getPebbles().get(W.getPebbles().size() - 1);
 
-                    // Logs the players discarded pebble and hand
-                    fileOut.println(name + " has discarded " + discarded + " to White Bag " + W.getName());
-                    fileOut.println(name + " hand is " + pebbles + " = " + (total - discarded));
+                // Logs the players discarded pebble and hand
+                fileOut.println(name + " has discarded " + discarded + " to White Bag " + W.getName());
+                fileOut.println(name + " hand is " + pebbles + " = " + (total - discarded));
 
 
-                    Bag B;
-                    int rBag;
+                Bag B;
+                int rBag;
 
-                    do {
-                        rBag = r.nextInt(blackbags.size());
-                        B = blackbags.get(rBag);
-                        lastdrawn = rBag;   
+                do {
+                    rBag = r.nextInt(blackbags.size());
+                    B = blackbags.get(rBag);
+                    lastdrawn = rBag;   
 
-                        // Checks if BlackBag is empty
-                        Bag.emptyBag(whitebags.get(rBag), B);
-                    } while (B.getPebbles().size() < 1);
+                    // Checks if BlackBag is empty
+                    Bag.emptyBag(whitebags.get(rBag), B);
+                } while (B.getPebbles().size() < 1);
 
-                    takePebble(B);
-                    int taken = pebbles.get(pebbles.size() - 1);
+                takePebble(B);
+                int taken = pebbles.get(pebbles.size() - 1);
 
-                    // Logs the players drawn pebble and hand
-                    fileOut.println(name + " has drawn a " + taken + " from Black Bag " + B.getName());
-                    fileOut.println(name + " hand is " + pebbles + " = " + total);
+                // Logs the players drawn pebble and hand
+                fileOut.println(name + " has drawn a " + taken + " from Black Bag " + B.getName());
+                fileOut.println(name + " hand is " + pebbles + " = " + total);
 
-                    if (total == 100) {
-                        winner = true;
-                        System.out.println(name + " has won");
-                    }
-                } catch (IllegalArgumentException e) {pebbles = oldpebs;}
-                System.out.println(oldpebs + " " + pebbles);
+                if (total == 100) {
+                    winner = true;
+                    System.out.println(name + " has won");
+                }
             }
         }
 
@@ -217,6 +213,7 @@ public class PebbleGame {
         }
     }
 
+    
     private static int findPlayerNum(Scanner input) {
         // The check for the number of players
         int playerNum = 1;
