@@ -23,13 +23,7 @@ public class Bag {
     public ArrayList<Integer> getPebbles() {
         return this.pebbles;
     }
-    
-    
-    // Method for instantiating a Bag
-    public static Bag makeBag(String name, ArrayList<Integer> pebbles) {
-        return new Bag(name, pebbles);
-    }
-    
+        
     
     public static void emptyBag(Bag W, Bag B) {
         if (B.getPebbles().size() < 1) {

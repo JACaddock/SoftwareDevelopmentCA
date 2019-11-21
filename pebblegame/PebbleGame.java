@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -30,15 +31,52 @@ public class PebbleGame {
 
 
     public static void main(String[] args) {
+        System.out.println("Welcome to the PebbleGame!");
+        System.out.println("You must input at least 1 player to play");
+        System.out.println("Please make sure you input files that are big enough");
+        System.out.println();
+        
         int num;
         ArrayList<Integer> x;
         ArrayList<Integer> y;
         ArrayList<Integer> z;
         try (Scanner input = new Scanner(System.in)) {
-            num = findPlayerNum(input);
-            x = findFileName("X", num, input);
-            y = findFileName("Y", num, input);
-            z = findFileName("Z", num, input);
+            do {
+                System.out.print("Please Enter the Number of players? : ");
+                String playerStr = input.nextLine();
+                num = findPlayerNum(playerStr);
+            } while (num <= 0);
+            
+            String textlocation;
+            do {
+                System.out.print("Please enter the path to the text file for Black Bag X : ");
+                textlocation = input.nextLine();
+                x = findFileName(num, textlocation);
+            } while (x == null);
+            
+            boolean decision = false;
+            try {
+                System.out.print("Would you like to use the same bag true|false : ");
+                decision = input.nextBoolean();
+            } catch (StringIndexOutOfBoundsException | InputMismatchException e) {
+                System.out.println("Error, Invalid input, defaulting to false");
+            }
+            
+            do {
+                if (!decision) {
+                    System.out.print("Please enter the path to the text file for Black Bag Y : ");
+                    textlocation = input.nextLine();
+                }
+                y = findFileName(num, textlocation);
+            } while (y == null);
+            
+            do {
+                if (!decision) {
+                    System.out.print("Please enter the path to the text file for Black Bag Z : ");
+                    textlocation = input.nextLine();
+                }
+                z = findFileName(num, textlocation);
+            } while (z == null);
         }
 
         new PebbleGame(num, x, y, z);
@@ -54,15 +92,15 @@ public class PebbleGame {
 
 
         // Instantiates the three BlackBags with their pebble weights, adds to ArrayList
-        blackbags.add(Bag.makeBag("X", pebblesx));
-        blackbags.add(Bag.makeBag("Y", pebblesy));
-        blackbags.add(Bag.makeBag("Z", pebblesz));
+        blackbags.add(new Bag("X", pebblesx));
+        blackbags.add(new Bag("Y", pebblesy));
+        blackbags.add(new Bag("Z", pebblesz));
 
 
         // Instantiates the three empty WhiteBags, adds to ArrayList
-        whitebags.add(Bag.makeBag("A", new ArrayList<>()));
-        whitebags.add(Bag.makeBag("B", new ArrayList<>()));
-        whitebags.add(Bag.makeBag("C", new ArrayList<>()));
+        whitebags.add(new Bag("A", new ArrayList<>()));
+        whitebags.add(new Bag("B", new ArrayList<>()));
+        whitebags.add(new Bag("C", new ArrayList<>()));
 
         // Makes the outputs folder
         new File("outputs").mkdirs();
@@ -214,97 +252,90 @@ public class PebbleGame {
     }
 
     
-    private static int findPlayerNum(Scanner input) {
+    private static int findPlayerNum(String playerStr) {
         // The check for the number of players
-        int playerNum = 1;
-        String playerStr;
-        do {
-            try {
-                System.out.print("Please Enter the Number of players? : ");
-                playerStr = input.nextLine();
-    
-                if (playerStr.charAt(0) == 'E') {
-                    System.exit(0);
-                }
-                try {
-                    if (Integer.parseInt(playerStr) > 0) {
-                        // Instantiates a lot of the key objects
-                        playerNum = Integer.parseInt(playerStr);
-                    }
-    
-                } catch (NumberFormatException e) {
-                    System.out.println("Please Enter a valid Integer");
-                    playerStr = "0";
-                }
-            } catch (StringIndexOutOfBoundsException e) {
-                System.out.println("Please Enter a valid Integer");
-                playerStr = "0";
+        int playerNum = 0;
+        try {    
+            if (playerStr.charAt(0) == 'E') {
+                System.exit(0);
             }
-        } while (Integer.parseInt(playerStr) <= 0);
+            try {
+                if (Integer.parseInt(playerStr) > 0) {
+                    playerNum = Integer.parseInt(playerStr);
+                } else {
+                    System.out.println("Please Enter a positive Integer");
+                    return 0;}
+    
+            } catch (NumberFormatException e) {
+                System.out.println("Please Enter an Integer");
+                return 0;
+            }
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Please Enter something");
+            return 0;
+        }
 
         return playerNum;
     }
 
 
-    private static ArrayList<Integer> findFileName(String name, int min, Scanner textfile) {
+    private static ArrayList<Integer> findFileName(int min, String textlocation) {
         ArrayList<Integer> pebbles = new ArrayList<>();
-        boolean finished = false;
-        String textlocation;
 
-        do {
-            try {
-                System.out.print("Please enter the path to the text file for Black Bag " + name + " : ");
-                
-                textlocation = textfile.nextLine();
-                
-                if (textlocation.charAt(0) == 'E') {
-                    System.exit(0);}
+        try {                
+            if (textlocation.charAt(0) == 'E') {
+                System.exit(0);}
 
-                BufferedReader br = null;
-                try{ 
-                    br = new BufferedReader(new FileReader(textlocation));
-                    String in;
+            BufferedReader br = null;
+            try{ 
+                br = new BufferedReader(new FileReader(textlocation));
+                String in;
 
-                    while((in = br.readLine()) != null) {
-                        String[] parts = in.split(",");
-                        
-                        for (int index = 0; index < parts.length; index++) {
-                            if (Integer.parseInt(parts[index]) <= 0) {
-                                br.close();
-                            } 
-                            pebbles.add(Integer.parseInt(parts[index]));
+                while((in = br.readLine()) != null) {
+                    String[] parts = in.split(",");
+
+                    for (int index = 0; index < parts.length; index++) {
+                        if (Integer.parseInt(parts[index]) <= 0) {
+                            br.close();
+                        } 
+                        pebbles.add(Integer.parseInt(parts[index]));
+                    }
+                }
+                if (pebbles.size() >= min * 11){
+                    int counter = 0;
+
+                    for (int peb : pebbles) {
+                        if (peb > 100) {
+                            warning = true;
+                            counter += 1;
+                        } else if (peb >= 10) {
+                            counter += 1;
                         }
                     }
-                    if (pebbles.size() >= min * 11){
-                        finished = true;
-                        
-                        for (int peb : pebbles) {
-                            if (peb > 100) {
-                                warning = true;
-                            }
-                        }
-                        
-                    } else {
-                        System.out.println("Error, File too small");
-                        pebbles.clear();}       
-                    
-                } catch (IOException | NumberFormatException e) {
-                    System.out.println("Error, invalid File");
-                    pebbles.clear();
-                    
-                } finally {
-                    try {
-                        br.close();
-                    } 
-                    catch (IOException | NullPointerException e) {
-                        pebbles.clear();} 
-                }
-            } catch (StringIndexOutOfBoundsException e) {
-                System.out.println("Error, invalid Input");
-                pebbles.clear();}
+                    if (counter > 10) {
+                        return pebbles;
+                    }
+
+                } else {
+                    System.out.println("Error, File too small");
+                    pebbles.clear();}       
+
+            } catch (IOException | NumberFormatException e) {
+                System.out.println("Error, invalid File");
+                pebbles.clear();
+
+            } finally {
+                try {
+                    br.close();
+                } 
+                catch (IOException | NullPointerException e) {
+                    pebbles.clear();} 
+            }
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Error, invalid Input");
+            pebbles.clear();}
             
-        } while (!finished);
         
-        return pebbles;
+        return null;
     }
 }
