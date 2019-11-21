@@ -8,7 +8,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -54,13 +53,8 @@ public class PebbleGame {
                 x = findFileName(num, textlocation);
             } while (x == null);
             
-            boolean decision = false;
-            try {
-                System.out.print("Would you like to use the same bag true|false : ");
-                decision = input.nextBoolean();
-            } catch (StringIndexOutOfBoundsException | InputMismatchException e) {
-                System.out.println("Error, Invalid input, defaulting to false");
-            }
+            System.out.print("Would you like to use the same bag true|false (defaults to false) : ");
+            boolean decision = Boolean.parseBoolean(input.nextLine().toLowerCase());
             
             do {
                 if (!decision) {
